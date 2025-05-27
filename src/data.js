@@ -1,9 +1,9 @@
 export const productos = [
     {
       id: 1,
-      nombre: "Silla Oficina",
-      precio: 300000,
-      modelo: "/model/chair.glb",
+      nombre: "Goku para escritorio",
+      precio: 500,
+      modelo: "/model/goku.glb",
     },
     {
       id: 2,

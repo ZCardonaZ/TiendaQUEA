@@ -45,7 +45,7 @@ export const Navbar = ({ carrito, favorito }) => {
    <header className="navbar">
     <div className="navbar-brand">
       <h1 onClick={goToHome} style={{ cursor: "pointer" }}>
-        Tienda 3D
+        QUEA
       </h1>
     </div>
 
