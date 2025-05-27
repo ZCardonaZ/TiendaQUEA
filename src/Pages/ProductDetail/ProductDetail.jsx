@@ -29,7 +29,7 @@ function ProductDetail({agregarAlCarrito, agregarFavoritos}){
                     <h2>{product.nombre}</h2>
                         <p className="detalle-precio">${product.precio}</p>
                         <p className="detalle-descripcion">
-                            Este es un excelente producto para tu hogar u oficina.
+                            Increible producto a un excelente precio de la tienda QUEA!!!!!!!!!!
                         </p>
                     <div className="btn-container">
                         <button 
