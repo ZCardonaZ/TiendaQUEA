@@ -23,5 +23,26 @@ export const productos = [
         precio: 80000,
         modelo: "/model/door.glb",
       },
+
+       {
+      id: 5,
+      nombre: "Lámpara de piso",
+      precio: 120000,
+      modelo: "/model/lamp.glb",
+    },
+
+     {
+      id: 6,
+      nombre: "Lámpara de piso",
+      precio: 120000,
+      modelo: "/model/lamp.glb",
+    },
+
+     {
+      id: 7,
+      nombre: "Lámpara de piso",
+      precio: 120000,
+      modelo: "/model/lamp.glb",
+    },
   ];
   
