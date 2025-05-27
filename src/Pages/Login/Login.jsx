@@ -16,12 +16,12 @@ export const Login = () => {
   return (
     <div className="login-container">
       <div className="login-header">
-        <h2>Iniciar Sesión</h2>
+        <h2>Bienvenido a QUEA!</h2>
       </div>
 
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
-          <label>Username</label>
+          <label>Usuario</label>
           <input
             type="text"
             value={username}
@@ -31,7 +31,7 @@ export const Login = () => {
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label>Contraseña/label>
           <input
             type="password"
             value={password}
