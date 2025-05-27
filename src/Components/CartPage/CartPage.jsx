@@ -11,10 +11,10 @@ const CartPage = ({ carrito, setCarrito }) => {
 
   return (
     <div className="cart-page">
-      <h2>Tu Carrito de Compras</h2>
+      <h2>Carrito de Compras</h2>
       <Carrito carrito={carrito} setCarrito={setCarrito} />
       <button onClick={volverInicio} className="volver-inicio">
-        Volver a la tienda
+        Volver al main
       </button>
     </div>
   );
