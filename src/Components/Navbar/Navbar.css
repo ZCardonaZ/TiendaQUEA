@@ -1,49 +1,73 @@
+:root {
+  --ikea-blue: #0051BA;
+  --ikea-yellow: #FFDA1A;
+  --ikea-text-dark: #333333;
+  --ikea-text-light: #FFFFFF;
+  --ikea-light-gray: #F5F5F5;
+  --ikea-medium-gray: #CCCCCC;
+}
+
 .navbar {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  margin: 0;
   z-index: 999;
-  background-color: #121212;
+  background-color: var(--ikea-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand h1 {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: var(--ikea-text-light);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+.navbar-brand h1:hover {
+  opacity: 0.85;
 }
-
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
+.navbar-actions button,
+.navbar-actions .icon-container {
+  background-color: transparent;
+  color: var(--ikea-text-light);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+}
+
+.navbar-actions button:hover,
+.navbar-actions .icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 
 .user-button {
-  color: var(--button-text);
+  color: var(--ikea-text-light);
+  background-color: transparent;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  margin-right: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .user-button:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-  background-color: #565656;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .user-dropdown {
@@ -53,141 +77,109 @@
 
 .dropdown-menu {
   position: absolute;
-  right: -30px;
-  top: 100%;
-  background-color: #121212;
+  right: 0;
+  top: calc(100% + 5px);
+  background-color: var(--ikea-light-gray);
   border-radius: 8px;
-  box-shadow: 0 2px 10px var(--shadow-color);
-  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
   z-index: 1000;
   overflow: hidden;
+  border: 1px solid var(--ikea-medium-gray);
 }
 
 .dropdown-item {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1.2rem;
   text-align: left;
   background: transparent;
   border: none;
-  color: var(--text-color);
+  color: var(--ikea-text-dark);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 0.95rem;
 }
 
 .dropdown-item:hover {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-}
-body.click-outside-listener {
-  position: relative;
-}
-
-body.click-outside-listener::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  display: none;
-}
-
-body.click-outside-listener.active::after {
-  display: block;
-}
-
-.icon-container:hover {
-  transform: scale(1.01);
+  background-color: var(--ikea-yellow);
+  color: var(--ikea-text-dark);
 }
 
 .icon-container {
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease;
+}
+
+.icon-container .fav-icon,
+.icon-container .cart-icon,
+.history-button {
+  color: var(--ikea-text-light);
 }
 
 .badge {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #f70b65;
-  color: white;
+  background-color: var(--ikea-yellow);
+  color: var(--ikea-text-dark);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
-
-.cart-page {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cart-page h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.navbar-brand h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--navbar-text);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.navbar-brand h1:hover {
-  opacity: 0.8;
-  transform: scale(1.02);
-}
-
-/* Responsive */
 
 .hamburger-menu {
   display: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--ikea-text-light);
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
-    position: absolute;
-    right: -0.5rem;
     z-index: 1001;
   }
 
   .navbar-actions {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 100%;
     right: 0;
-    background-color: #121212;
+    left: 0;
+    background-color: var(--ikea-blue);
     flex-direction: column;
-    align-items: flex-start;
-    border-radius: 10px;
+    align-items: stretch;
+    border-radius: 0 0 8px 8px;
     padding: 1rem;
-    width: 100%;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   .navbar-actions.open {
     display: flex;
-    width: 30%;
   }
 
   .navbar-actions button,
-  .cart-icon-container,
-  .user-dropdown {
+  .navbar-actions .icon-container,
+  .navbar-actions .user-dropdown {
     width: 100%;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .navbar-actions button:last-child,
+  .navbar-actions .icon-container:last-child,
+  .navbar-actions .user-dropdown:last-child {
+    border-bottom: none;
   }
 
   .user-button {
@@ -199,5 +191,16 @@ body.click-outside-listener.active::after {
     position: static;
     box-shadow: none;
     margin-top: 0.5rem;
+    border: none;
+    background-color: rgba(255,255,255,0.05);
+  }
+
+  .dropdown-item {
+    padding-left: 1.5rem;
+    color: var(--ikea-text-light);
+  }
+  .dropdown-item:hover {
+    background-color: var(--ikea-yellow);
+    color: var(--ikea-text-dark);
   }
 }

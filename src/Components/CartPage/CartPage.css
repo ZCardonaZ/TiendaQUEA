@@ -1,132 +1,187 @@
-/* CartPage.css */
+:root {
+  --ikea-blue: #0051BA;
+  --ikea-yellow: #FFDA1A;
+  --ikea-text-dark: #333333;
+  --ikea-text-light: #FFFFFF;
+  --ikea-light-gray: #F5F5F5;
+  --ikea-medium-gray: #DDDDDD;
+  --ikea-border-soft: #EEEEEE;
+  --ikea-danger-red: #E74C3C;
+  --ikea-danger-red-hover: #C0392B;
+}
 
 .cart-page {
   max-width: 800px;
-  margin: 3rem auto;
-  padding: 2.5rem;
-  background-color: #2a2a2a;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--ikea-light-gray);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-
+  color: var(--ikea-text-dark);
 }
 
 .cart-page h2 {
-  font-size: 2.2rem;
-  color: #ffffff;
+  font-size: 2rem;
+  color: var(--ikea-text-dark);
   margin-bottom: 2rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 
 .carrito {
   margin-top: 1.5rem;
-  background-color: #303030;
+  background-color: var(--ikea-text-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   margin-bottom: 1.5rem;
 }
 
 .carrito h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  color: var(--ikea-text-dark);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--ikea-yellow);
 }
 
 .carrito ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .carrito li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #3a3a3a;
-  margin-bottom: 0.75rem;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  color: #f0f0f0;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--ikea-border-soft);
+  font-size: 1rem;
+  color: var(--ikea-text-dark);
+}
+
+.carrito li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .carrito li:hover {
-  background-color: #434343;
-
+  background-color: transparent;
 }
 
 .carrito button {
-  background-color: #e74c3c;
-  color: white;
+  background-color: var(--ikea-danger-red);
+  color: var(--ikea-text-light);
   border: none;
   border-radius: 6px;
-  padding: 0.5rem 0.9rem;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
 }
 
 .carrito button:hover {
-  background-color: #c0392b;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: var(--ikea-danger-red-hover);
 }
 
 .carrito h3 {
-  font-size: 1.3rem;
-  color: #e0e0e0;
-  margin: 1rem 0;
-  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--ikea-text-dark);
+  margin: 0.8rem 0;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #444;
 }
 
-#fin {
-  background-color: #4b6cb7;
+.carrito h3:not(:last-of-type) {
+   border-bottom: 1px dashed var(--ikea-medium-gray);
+}
+
+.carrito #fin {
+  background-color: var(--ikea-yellow);
+  color: var(--ikea-text-dark);
   width: 100%;
-  padding: 1rem;
+  padding: 0.9rem;
   font-size: 1.1rem;
+  font-weight: bold;
   margin-top: 1.5rem;
   letter-spacing: 0.5px;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
 }
 
-#fin:hover {
-  background-color: #3a549f;
+.carrito #fin:hover {
+  background-color: #F0CD13;
+}
+
+.volver-inicio {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--ikea-blue);
+  color: var(--ikea-text-light);
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.volver-inicio:hover {
+  background-color: #003D8C;
 }
 
 .empty-cart-message {
-  color: #aaa;
-  font-size: 1.2rem;
+  color: var(--ikea-text-dark);
+  opacity: 0.7;
+  font-size: 1.1rem;
   text-align: center;
-  padding: 2rem;
-  border: 1px dashed #444;
-  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  border: 2px dashed var(--ikea-medium-gray);
+  border-radius: 8px;
   margin-top: 1rem;
+  background-color: var(--ikea-text-light);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .cart-page {
     padding: 1.5rem;
-    margin: 2rem 1rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .cart-page h2 {
+    font-size: 1.8rem;
   }
   
   .carrito li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 1rem;
+    padding: 0.8rem 0;
+  }
+
+  .carrito h2 {
+    font-size: 1.5rem;
   }
   
   .carrito button {
-    align-self: flex-end;
+    padding: 0.5rem 0.9rem; /* Mantener el padding del botón de eliminar */
+  }
+
+  .carrito #fin {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }

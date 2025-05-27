@@ -1,78 +1,108 @@
+:root {
+  --ikea-blue: #0051BA;
+  --ikea-yellow: #FFDA1A;
+  --ikea-text-dark: #333333;
+  --ikea-text-light: #FFFFFF;
+  --ikea-light-gray: #F5F5F5;
+  --ikea-medium-gray: #DDDDDD;
+  --ikea-border-soft: #EEEEEE;
+  --ikea-success-green: #4CAF50; /* Un verde estándar para éxito */
+  --ikea-success-green-darker: #388E3C;
+}
+
 .factura {
-  max-width: 600px;
+  max-width: 650px;
   margin: 2rem auto;
   padding: 2.5rem;
-  background-color: #242424;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: var(--ikea-text-light);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  color: #dfdfdf;
-  border: 1px solid #474747;
+  color: var(--ikea-text-dark);
+  border: 1px solid var(--ikea-medium-gray);
 }
 
 .factura h2 {
   text-align: center;
-  color: #d7d7d7;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  color: var(--ikea-text-dark);
+  margin-bottom: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 600;
-  letter-spacing: -0.5px;
 }
 
 .factura p {
-  margin: 0.75rem 0;
+  margin: 0.8rem 0;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #e4e4e4;
+  line-height: 1.6;
+  color: var(--ikea-text-dark);
 }
 
 .factura p strong {
-  color: #e2e2e2;
-  font-weight: 1000;
-  min-width: 100px;
+  color: var(--ikea-text-dark);
+  font-weight: 600;
+  min-width: 120px;
   display: inline-block;
 }
 
 .factura ul {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
-  border-top: 1px solid #717171;
-  border-bottom: 1px solid #717171;
-  padding: 0.5rem 0;
+  margin: 1.8rem 0;
+  border-top: 1px solid var(--ikea-border-soft);
+  border-bottom: 1px solid var(--ikea-border-soft);
+  padding: 1rem 0;
 }
 
 .factura li {
-  padding: 0.75rem 0;
+  padding: 0.8rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
+  color: var(--ikea-text-dark);
 }
 
 .factura li:not(:last-child) {
-  border-bottom: 1px solid #717171;
+  border-bottom: 1px dashed var(--ikea-medium-gray);
 }
 
 .factura h3 {
-  margin: 1.25rem 0 0.5rem;
-  font-weight: 500;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
   text-align: right;
   font-size: 1.1rem;
-  color: #e4e4e4;
+  color: var(--ikea-text-dark);
 }
 
-.factura h2:last-of-type {
+.factura h2:last-of-type { /* Para el TOTAL */
   margin-top: 1.5rem;
   font-weight: 700;
   text-align: right;
-  font-size: 1.6rem;
-  color: #dbdbdb;
-  padding-top: 0.75rem;
-  border-top: 2px solid #717171;
+  font-size: 1.7rem;
+  color: var(--ikea-blue); /* Total destacado en azul IKEA */
+  padding-top: 1rem;
+  border-top: 2px solid var(--ikea-yellow); /* Línea amarilla encima del total */
 }
 
-/*success popup tsyles */
+.finalizar-btn {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--ikea-yellow);
+  border: none;
+  color: var(--ikea-text-dark);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+}
+
+.finalizar-btn:hover {
+  background-color: #F0CD13; /* Amarillo IKEA más oscuro */
+}
 
 .success-popup {
   position: fixed;
@@ -80,56 +110,62 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1050;
   animation: fadeIn 0.3s ease-out;
 }
 
 .success-content {
-  background-color: rgb(45, 45, 45);
-  padding: 2rem;
+  background-color: var(--ikea-text-light);
+  padding: 2.5rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  max-width: 380px;
+  border-top: 5px solid var(--ikea-success-green);
+  color: var(--ikea-text-dark);
 }
 
 .success-content h3 {
-  color: #9abbf6;
+  color: var(--ikea-success-green);
+  margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .success-content p {
-  color: #dadada;
+  color: var(--ikea-text-dark);
+  opacity: 0.9;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .success-content::before {
-  content: "✓";
+  content: "✓"; /* O un SVG/icono de IKEA si tienes */
   display: block;
-  font-size: 3rem;
-  color: #3a549f;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  color: var(--ikea-success-green);
+  margin-bottom: 1.5rem;
+  line-height: 1;
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .factura {
-    padding: 1.5rem;
-    margin: 1rem;
-    border-radius: 12px;
+    padding: 1.8rem;
+    margin: 1.5rem;
   }
   
   .factura h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   
   .factura p {
@@ -137,24 +173,24 @@
   }
   
   .factura p strong {
-    min-width: 80px;
+    min-width: 100px;
+  }
+  .factura h2:last-of-type {
+    font-size: 1.5rem;
+  }
+  .finalizar-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  .success-content {
+    padding: 2rem;
+    max-width: calc(100% - 2rem);
+  }
+  .success-content h3 {
+    font-size: 1.4rem;
+  }
+  .success-content::before {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 }
-
-.finalizar-btn {
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #4b6cb7;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.finalizar-btn:hover {
-  background-color: #3a549f;
-}
-

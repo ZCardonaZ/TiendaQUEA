@@ -1,30 +1,110 @@
+:root {
+  --ikea-blue: #0051BA;
+  --ikea-yellow: #FFDA1A;
+  --ikea-text-dark: #333333;
+  --ikea-text-light: #FFFFFF;
+  --ikea-light-gray: #F5F5F5;
+  --ikea-medium-gray: #DDDDDD;
+  --ikea-border-soft: #EEEEEE;
+}
+
 .historial {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  margin-top: 9rem;
-  background: #242424;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #636363;
-  
+  background: var(--ikea-text-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ikea-medium-gray);
+  color: var(--ikea-text-dark);
+  margin-top: 2rem; /* Ajusta si tienes un navbar fijo y necesitas espacio */
+}
+
+.historial h2 {
+  font-size: 1.8rem;
+  color: var(--ikea-text-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ikea-yellow);
+  display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
 }
 
 .factura-item {
-  background: rgb(47, 47, 47);
-
-  padding: 1rem;
+  background: var(--ikea-light-gray);
+  padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--ikea-border-soft);
+}
+
+.factura-item p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.factura-item strong {
+  color: var(--ikea-text-dark);
+  font-weight: 600;
 }
 
 .factura-item ul {
   padding-left: 1.5rem;
   list-style: disc;
+  margin: 1rem 0;
+  color: var(--ikea-text-dark);
+  opacity: 0.9;
+}
+
+.factura-item li {
+  margin-bottom: 0.4rem;
+}
+
+.factura-item hr {
+  border: none;
+  border-top: 1px solid var(--ikea-medium-gray);
+  margin: 1.5rem 0;
+}
+
+.historial .volver-inicio,
+.vacio #empty-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--ikea-blue);
+  color: var(--ikea-text-light);
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.historial .volver-inicio:hover,
+.vacio #empty-btn:hover {
+  background-color: #003D8C;
+}
+
+.vacio {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--ikea-text-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 1px solid var(--ikea-border-soft);
 }
 
 .historial-vacio {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
   font-size: 1.2rem;
+  color: var(--ikea-text-dark);
+  opacity: 0.8;
 }

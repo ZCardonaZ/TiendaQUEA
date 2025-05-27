@@ -2,24 +2,24 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: #e0e0e0; /* texto claro para modo oscuro */
+  color-scheme: light; /* Forzamos el esquema claro */
+  color: #333333; /* Texto principal oscuro (negro suave) */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #121212; /* fondo oscuro profesional */
+  background-color: #FFFFFF; /* Fondo principal blanco */
 }
 
 a {
   font-weight: 500;
-  color: #0a84ff; /* azul profesional, más sobrio */
-  text-decoration: none;
+  color: #0051BA; /* Azul IKEA para enlaces */
+  text-decoration: none; /* Puedes mantener 'none' o 'underline' */
 }
 a:hover {
-  color: #0060df; /* azul más oscuro al pasar el mouse */
+  color: #003D8C; /* Azul IKEA más oscuro para hover */
 }
 
 body {
@@ -28,70 +28,38 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #FFFFFF; 
+  color: #333333; 
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #ffffff; /* encabezado blanco puro para contraste */
+  color: #333333; 
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #0051BA; 
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #2c2c2e; /* gris grafito */
-  color: #ffffff;
+  background-color: #FFDA1A; 
+  color: #333333; 
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
 button:hover {
-  border-color: #0a84ff;
-  background-color: #3a3a3c; /* tono ligeramente más claro */
+  border-color: #003D8C; 
+  background-color: #F0CD13; 
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto rgba(10, 132, 255, 0.5); /* enfoque accesible */
+  outline: 4px auto rgba(0, 81, 186, 0.5); 
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #1e1e1e;
-    background-color: #f5f5f5;
-  }
 
-  a {
-    color: #0a60b0;
-  }
-
-  a:hover {
-    color: #084a91;
-  }
-
-  button {
-    background-color: #e0e0e0;
-    color: #1e1e1e;
-  }
-
-  button:hover {
-    background-color: #d0d0d0;
-    border-color: #0a60b0;
-  }
-
-  h1 {
-    color: #1e1e1e;
-  }
-
-  body {
-    background-color: #f5f5f5;
-    color: #1e1e1e;
-  }
-}
 
 #root {
   width: 100%;
