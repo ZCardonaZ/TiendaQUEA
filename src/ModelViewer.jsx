@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 export default function ModelViewer() {
   useEffect(() => {
-    import('@google/model-viewer'); 
+    import('@google/model-viewer'); // Import dinámico para web components
   }, []);
 
   return (

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import "@google/model-viewer";
-import { productos } from "./data"; 
-import { Navbar } from "./Components/Navbar/navbar"; 
-import "./App.css"; 
+import { productos } from "./data";
+import { Navbar } from "./Components/Navbar/navbar";
+import "./App.css";
 import { useNavigate, Routes, Route } from "react-router-dom";
-import CartPage from "./Components/CartPage/CartPage"; 
-import ProductDetail from "./Pages/ProductDetail/ProductDetail"; 
-import CheckoutForm from "./Pages/Form/CheckoutForm"; 
-import Bill from "./Pages/Bill/Bill"; 
-import History from "./Pages/History/History"; 
-import Favorite from "./Pages/Favorite/Favorite"; 
-import Footer from "./Components/Footer/Footer"; 
+import CartPage from "./Components/CartPage/CartPage";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import CheckoutForm from "./Pages/Form/CheckoutForm";
+import Bill from "./Pages/Bill/Bill"
+import History from "./Pages/History/History";
+import Favorite from "./Pages/Favorite/Favorite"
 
 function App() {
     const navigate = useNavigate();
@@ -39,7 +38,7 @@ function App() {
                     item.id === producto.id
                         ? { ...item, cantidad: item.cantidad + 1 }
                         : item
-                );
+                    );
                 } else {
                   return [...prev, { ...producto, cantidad: 1 }];
             }
@@ -67,7 +66,7 @@ function App() {
 
     return (
       <div className="app">
-          <Navbar carrito={carrito} favorito={favoritos}/> {/* */}
+          <Navbar carrito={carrito} favorito={favoritos}/>
           <main className="main-content">
               <Routes>
                   <Route
@@ -118,16 +117,15 @@ function App() {
                       />
                     }
                   />
-                  <Route path="/bill" element={<Bill datos={datosCompra} /> } /> {/* */}
-                  <Route path="/history" element={<History />} /> {/* */}
+                  <Route path="/bill" element={<Bill datos={datosCompra} /> } />
+                  <Route path="/history" element={<History />} />
                   <Route path="/favorite" element={<Favorite 
                     favoritos={favoritos}  
                     eliminarFavoritos={eliminarFavoritos}
-                  />} /> {/* */}
+                  />} />
 
               </Routes>
           </main>
-          <Footer /> {/* Añade esta línea */}
       </div>
     );
   }
