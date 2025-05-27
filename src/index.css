@@ -4,22 +4,21 @@
   --color-primary-warm: #FFC107; 
   --color-secondary-warm: #DAA520; 
   --color-background-warm: #FAF3E0; 
-  --color-surface-warm: #FFFFFF;   
+  --color-surface-warm: #FFFFFF;  
   --color-text-primary-warm: #4A3B31; 
-  --color-text-secondary-warm: #7D6E63; 
-  --color-accent-warm: #E67E22;   
-  --color-link-warm: #BF5700;       
+  --color-text-secondary-warm: #7D6E63;
+  --color-accent-warm: #E67E22;     
+  --color-link-warm: #BF5700;        
   --color-link-hover-warm: #A34900;   
 
-  
-  --color-neutral-light: #F5F5F5; 
-  --color-neutral-medium: #D3CFC7; 
-  --color-neutral-dark: #5C544D;   
-
+  --color-neutral-light: #F5F5F5;
+  --color-neutral-medium: #D3CFC7;
+  --color-neutral-dark: #5C544D;
 
   --color-error: #dc3545;
   --color-success: #28a745;
 
+  
   --color-primary: var(--color-primary-warm);
   --color-secondary: var(--color-secondary-warm);
   --color-background: var(--color-background-warm);
@@ -44,8 +43,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 a {
   font-weight: 500;
   color: var(--color-link);
@@ -61,7 +58,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-
+  
 }
 
 h1 {
@@ -69,6 +66,10 @@ h1 {
   line-height: 1.1;
   color: var(--color-text-primary);
 }
+h2 {
+ color: var(--color-text-primary);
+}
+
 
 button {
   border-radius: 8px;
@@ -79,23 +80,22 @@ button {
   font-family: inherit;
   background-color: var(--color-primary);
   color: var(--color-text-primary); 
- 
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
-  border-color: var(--color-secondary-warm); 
+  border-color: var(--color-secondary-warm);
   background-color: var(--color-secondary-warm);
   color: var(--color-surface-warm); 
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto var(--color-accent); 
+  outline: 4px auto var(--color-accent);
 }
 
 #root {
   width: 100%;
   display: flex;
   justify-content: center;
-
+  
 }
