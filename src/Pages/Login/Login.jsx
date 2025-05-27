@@ -21,7 +21,7 @@ export const Login = () => {
 
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
-          <label>Username</label>
+          <label>Nombre de Usuario👽 </label>
           <input
             type="text"
             value={username}
@@ -31,7 +31,7 @@ export const Login = () => {
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label>Contraseña🤫</label>
           <input
             type="password"
             value={password}
