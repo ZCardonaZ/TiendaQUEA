@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "@google/model-viewer";
+import Footer from "./Components/Footer/Footer";
 import { productos } from "./data";
 import { Navbar } from "./Components/Navbar/navbar";
 import "./App.css";
@@ -126,6 +127,7 @@ function App() {
 
               </Routes>
           </main>
+          <Footer /> {/*Footer*/}
       </div>
     );
   }
