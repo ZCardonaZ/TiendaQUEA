@@ -7,6 +7,7 @@ import { useNavigate, Routes, Route } from "react-router-dom";
 import CartPage from "./Components/CartPage/CartPage";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import CheckoutForm from "./Pages/Form/CheckoutForm";
+import Footer from "./Components/Footer/Footer";
 import Bill from "./Pages/Bill/Bill"
 import History from "./Pages/History/History";
 import Favorite from "./Pages/Favorite/Favorite"
@@ -126,6 +127,7 @@ function App() {
 
               </Routes>
           </main>
+          <Footer /> 
       </div>
     );
   }
