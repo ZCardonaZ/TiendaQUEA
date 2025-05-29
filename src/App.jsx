@@ -95,7 +95,7 @@ function App() {
                                         e.stopPropagation(); //
                                         agregarAlCarrito(item); //
                                       }}
-                                    > 🛒 Agregar al carrito {/* */}
+                                    > Agregar al 🚗 {/* */}
                                     </button>
                                 </div>
                             ))}
@@ -103,31 +103,31 @@ function App() {
                         }
                   />
                   <Route
-                    path="/cart" //
-                    element={<CartPage carrito={carrito} setCarrito={setCarrito} />} //
+                    path="/cart" 
+                    element={<CartPage carrito={carrito} setCarrito={setCarrito} />} 
                   />
-                  <Route path="/producto/:id" element= //
-                  {<ProductDetail agregarFavoritos={agregarFavoritos} agregarAlCarrito={agregarAlCarrito}  />} //
+                  <Route path="/producto/:id" element= 
+                  {<ProductDetail agregarFavoritos={agregarFavoritos} agregarAlCarrito={agregarAlCarrito}  />} 
                    />
-                  <Route path="/form" //
-                    element = { //
+                  <Route path="/form" 
+                    element = { 
                       <CheckoutForm
-                        carrito={carrito} //
-                        setCarrito={setCarrito} //
-                        setDatosCompra={setDatosCompra} //
+                        carrito={carrito} 
+                        setCarrito={setCarrito} 
+                        setDatosCompra={setDatosCompra} 
                       />
                     }
                   />
                   <Route path="/bill" element={<Bill datos={datosCompra} /> } /> {/* */}
                   <Route path="/history" element={<History />} /> {/* */}
-                  <Route path="/favorite" element={<Favorite  //
-                    favoritos={favoritos}   //
-                    eliminarFavoritos={eliminarFavoritos} //
+                  <Route path="/favorite" element={<Favorite  
+                    favoritos={favoritos}   
+                    eliminarFavoritos={eliminarFavoritos} 
                   />} />
 
               </Routes>
           </main>
-          <Footer /> {/* <-- Añade el componente Footer aquí */}
+          <Footer /> 
       </div>
     );
   }
