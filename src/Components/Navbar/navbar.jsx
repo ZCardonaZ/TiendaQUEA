@@ -61,7 +61,7 @@ export const Navbar = ({ carrito, favorito }) => {
       <button className="icon-container" id="fav" onClick={() => {
         navigate("/favorite");
         setMobileMenuOpen(false);}}>
-          <span className="fav-icon">🤍 Favoritos</span>
+          <span className="fav-icon">Deseos</span>
             {favorito.length > 0 && (
           <span className="badge">{favorito.length}</span>
           )}
@@ -71,7 +71,7 @@ export const Navbar = ({ carrito, favorito }) => {
           goToCart(); 
           setMobileMenuOpen(false);
         }}>
-          <span className="cart-icon">🛒 Mi carrito</span>
+          <span className="cart-icon">Carrito</span>
             {carrito.length > 0 && (
           <span className="badge">{carrito.length}</span>
           )}
@@ -81,7 +81,7 @@ export const Navbar = ({ carrito, favorito }) => {
         navigate("/history");
         setMobileMenuOpen(false);
         }}>
-        📋 Historial
+        Historial
       </button>
 
       <div className="user-dropdown">
