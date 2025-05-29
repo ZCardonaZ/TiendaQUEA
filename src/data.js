@@ -13,7 +13,7 @@ export const productos = [
     },
     {
       id: 3,
-      nombre: "Cama basica,
+      nombre: "Cama basica",
       precio: 360000,
       modelo: "/model/cama.glb",
     },
