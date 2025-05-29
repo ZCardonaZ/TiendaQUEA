@@ -1,0 +1,123 @@
+:root {
+  --ikea-blue: #0051BA;
+  --ikea-yellow: #FFDA1A;
+  --ikea-text-dark: #333333;
+  --ikea-text-light: #FFFFFF;
+  --ikea-light-gray: #F5F5F5;
+  --ikea-footer-bg: #2C3E50; 
+  --ikea-footer-text: #BDC3C7; 
+  --ikea-footer-link-hover: var(--ikea-yellow); 
+}
+
+.site-footer {
+  background-color: var(--ikea-footer-bg); 
+  color: var(--ikea-footer-text); 
+  padding: 40px 20px; 
+  font-size: 0.9rem; 
+  line-height: 1.6; 
+  margin-top: auto; 
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px auto; 
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3,
+.footer-section h2.footer-logo-text {
+  color: var(--ikea-text-light);
+  margin-bottom: 15px; 
+  font-weight: 600; 
+}
+
+.footer-logo-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-size: 1.8rem; 
+  color: var(--ikea-yellow); 
+  margin-top: 0; 
+}
+
+.footer-section p {
+  margin-bottom: 10px; 
+}
+
+.footer-section.links ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+.footer-section.links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section.links ul li a {
+  color: var(--ikea-footer-text); 
+  text-decoration: none; 
+  transition: color 0.2s ease; 
+}
+
+.footer-section.links ul li a:hover {
+  color: var(--ikea-footer-link-hover); 
+  text-decoration: underline; 
+}
+
+.footer-section.contact-info p {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.footer-section.contact-info i { 
+  color: var(--ikea-yellow); 
+  width: 16px; 
+  text-align: center; 
+}
+
+.footer-section .contact span { 
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-section .contact i {
+   color: var(--ikea-yellow);
+   margin-right: 8px;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px; 
+  border-top: 1px solid #4A6076; 
+  font-size: 0.85rem; 
+  color: #95A5A6; 
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .footer-section {
+    min-width: 100%; 
+    margin-bottom: 30px; 
+  }
+  .footer-section:last-child {
+    margin-bottom: 0; 
+  }
+  .footer-section.contact-info p {
+    justify-content: center; 
+  }
+}
