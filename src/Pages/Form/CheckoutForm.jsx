@@ -45,7 +45,7 @@ export default function FormularioCompra({ carrito, setCarrito, setDatosCompra }
           type="text"
           required
           onChange={handleChange}
-          placeholder="Ej: Juan Pérez"
+          placeholder="Ejemplo: Leo Messi"
         />
       </div>
       
@@ -57,7 +57,7 @@ export default function FormularioCompra({ carrito, setCarrito, setDatosCompra }
           type="text"
           required
           onChange={handleChange}
-          placeholder="Ej: Calle 123 #45-67"
+          placeholder="Ejemplo: Calle BATMAN"
         />
       </div>
       
@@ -69,7 +69,7 @@ export default function FormularioCompra({ carrito, setCarrito, setDatosCompra }
           type="text"
           required
           onChange={handleChange}
-          placeholder="Ej: Bogotá"
+          placeholder="Ejemplo: Ciudad Gotica"
         />
       </div>
       
@@ -81,7 +81,7 @@ export default function FormularioCompra({ carrito, setCarrito, setDatosCompra }
           type="tel"
           required
           onChange={handleChange}
-          placeholder="Ej: 3001234567"
+          placeholder="Ejemplo : 3001234567"
         />
       </div>
       

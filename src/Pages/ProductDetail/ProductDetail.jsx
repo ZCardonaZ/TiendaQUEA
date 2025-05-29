@@ -36,13 +36,13 @@ function ProductDetail({agregarAlCarrito, agregarFavoritos}){
                             className = "detalle-btn"
                             onClick={() => agregarAlCarrito(product)}
                         > 
-                            🛒 Agregar al carrito
+                            Agregar al carrito
                         </button>
                         <button 
                         className="detalle-btn" id="fav"
                         onClick={() => agregarFavoritos(product)}
                         >
-                            🤍 Añadir a favoritos
+                            Añadir a favoritos
                         </button>
                     </div>
                     <div className="volver-container">

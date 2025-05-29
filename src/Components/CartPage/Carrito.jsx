@@ -15,7 +15,7 @@ export function Carrito({ carrito, setCarrito }) {
     <div className="carrito">
       <h2>Agregar a Deseos</h2>
       {carrito.length === 0 ? (
-        <p>Tu carrito está vacío</p>
+        <p>Tu carro está vacío</p>
       ) : (
         <>
           <ul>
