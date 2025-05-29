@@ -15,7 +15,6 @@ export default function Bill({ datos }) {
     
     setShowSuccess(true);
     
-    // 2000 = 2s
     setTimeout(() => {
       navigate("/");
     }, 2000);
@@ -50,7 +49,7 @@ export default function Bill({ datos }) {
         <div className="success-popup">
           <div className="success-content">
             <h3>¡Compra exitosa!</h3>
-            <p>Gracias por tu compra</p>
+            <p>Gracias por mercar</p>
           </div>
         </div>
       )}

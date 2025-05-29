@@ -8,7 +8,7 @@ export default function Favoritos({ favoritos, eliminarFavoritos }) {
     if (favoritos.length === 0) {
         return (
             <div className="vacio">
-                <p className="favoritos-vacio">No tienes productos favoritos.</p>
+                <p className="favoritos-vacio">No tienes deseos.</p>
                 <button onClick={() => navigate("/")} id="empty-btn">
                 Volver a la tienda
                 </button>
@@ -18,7 +18,7 @@ export default function Favoritos({ favoritos, eliminarFavoritos }) {
 
     return (
     <div className="favoritos">
-        <h2>❤️ Tus productos favoritos</h2>
+        <h2>Tu lista de deseos</h2>
         <div className="favoritos-lista">
             {favoritos.map((p) => (
                 <div key={p.id} className="favorito-card">
@@ -38,7 +38,7 @@ export default function Favoritos({ favoritos, eliminarFavoritos }) {
                            className="quitar-favorito"
                            onClick={() => eliminarFavoritos(p.id)}
                        >
-                           ❌ Quitar
+                           Eliminar
                        </button>
                     
                        <button

@@ -6,7 +6,7 @@
   --ikea-light-gray: #F5F5F5;
   --ikea-medium-gray: #DDDDDD;
   --ikea-border-soft: #EEEEEE;
-  --ikea-success-green: #4CAF50; /* Un verde estándar para éxito */
+  --ikea-success-green: #4CAF50; 
   --ikea-success-green-darker: #388E3C;
 }
 
@@ -74,14 +74,14 @@
   color: var(--ikea-text-dark);
 }
 
-.factura h2:last-of-type { /* Para el TOTAL */
+.factura h2:last-of-type { 
   margin-top: 1.5rem;
   font-weight: 700;
   text-align: right;
   font-size: 1.7rem;
-  color: var(--ikea-blue); /* Total destacado en azul IKEA */
+  color: var(--ikea-blue); 
   padding-top: 1rem;
-  border-top: 2px solid var(--ikea-yellow); /* Línea amarilla encima del total */
+  border-top: 2px solid var(--ikea-yellow); 
 }
 
 .finalizar-btn {
@@ -101,7 +101,7 @@
 }
 
 .finalizar-btn:hover {
-  background-color: #F0CD13; /* Amarillo IKEA más oscuro */
+  background-color: #F0CD13; 
 }
 
 .success-popup {
